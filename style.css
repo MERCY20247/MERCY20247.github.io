@@ -70,6 +70,17 @@ header {
   color: #ffdd00;
 }
 
+/* Profile Image (Home) */
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+
+/* Button */
 .btn {
   display: inline-block;
   margin-top: 20px;
@@ -82,6 +93,34 @@ header {
 
 .btn:hover {
   background: #ffcc00;
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  flex-direction: row;  /* side by side */
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
+}
+
+.about-img {
+  width: 180px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  text-align: justify;
 }
 
 /* Skills */
@@ -127,4 +166,20 @@ footer {
   color: #fff;
   padding: 15px 0;
   text-align: center;
+}
+
+/* Responsive Fix for small screens */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: justify;
+  }
+
+  .about-img {
+    width: 200px;
+  }
 }

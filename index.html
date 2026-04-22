@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aziirwe Mercy - Portfolio</title>
   <link rel="stylesheet" href="style.css">
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome for icons -->
+
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -16,7 +18,13 @@
   <header>
     <nav>
       <h2 class="logo">My Portfolio<span>.</span></h2>
-      <ul class="nav-links">
+
+      <!-- Hamburger Icon -->
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -88,13 +96,30 @@
     <h2>Contact Me</h2>
     <p>📞 Phone: 0757185014</p>
     <p>📧 Email: <a href="mailto:aziirwemercy@gmail.com">aziirwemercy@gmail.com</a></p>
-    <p>🌐 GitHub: <a href="https://github.com/MERCY20247" target="_blank">Find me on github</a></p>
-    <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/azairwe-mercy-5a5338336/" target="_blank">On linkedin</a></p>
+    <p>🌐 GitHub: <a href="https://github.com/MERCY20247" target="_blank">Find me on GitHub</a></p>
+    <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/azairwe-mercy-5a5338336/" target="_blank">On LinkedIn</a></p>
   </section>
 
   <footer>
     <p>© 2025 Aziirwe Mercy | My Portfolio</p>
   </footer>
+
+  <!-- ====== SCRIPT ====== -->
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+  </script>
 
 </body>
 </html>

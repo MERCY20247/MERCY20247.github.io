@@ -183,3 +183,21 @@ footer {
     width: 200px;
   }
 }
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}

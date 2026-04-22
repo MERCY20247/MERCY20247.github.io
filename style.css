@@ -26,7 +26,7 @@ a:hover {
 
 /* Navbar */
 header {
-  background: #222;
+  background: #0f4c5c;
   color: #fff;
   padding: 15px 20px;
   position: sticky;
@@ -162,7 +162,7 @@ header {
 }
 
 footer {
-  background: #222;
+  background: #0f4c5c;
   color: #fff;
   padding: 15px 0;
   text-align: center;
